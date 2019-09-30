@@ -1,0 +1,24 @@
+{
+  "name": "react-native-single-choice",
+  "version": "0.1.0",
+  "description": "Radio button component for react-native",
+  "main": "SingleChoice.js",
+  "repository": "https://github.com/vinhnglx/radio-button-react-native",
+  "author": "Vincent Nguyen",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "radio-button",
+    "react-native-radio-button"
+  ],
+  "bugs": {
+    "url": "https://github.com/vinhnglx/radio-button-react-native/issues"
+  },
+  "homepage": "https://github.com/ide/react-native-button",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+}
