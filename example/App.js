@@ -32,11 +32,14 @@ const App = () => {
   console.log(securityMethodOptions);
 
   return (
-    <View style={{flex: 1, marginTop: 20}}>
+    <View style={{flex: 1, marginTop: 40, marginLeft: 20}}>
+      <Text>React Native Single Choice</Text>
       <SingleChoice
         options={securityMethodOptions}
         defaultValue={securityMethod}
         keyName="method"
+        // selectDirection="row"
+        selectDirection="column"
       />
     </View>
   );

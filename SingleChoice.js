@@ -4,8 +4,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 const styles = StyleSheet.create({
   componentContainer: {
     justifyContent: "space-around",
-    marginTop: 30,
-    flexDirection: "row"
+    marginTop: 30
   },
   buttonContainer: {
     flexDirection: "row",
@@ -34,9 +33,11 @@ const styles = StyleSheet.create({
 });
 
 const SingleChoice = props => {
-  const { options, defaultValue, keyName } = props;
+  const { options, defaultValue, keyName, selectDirection } = props;
   return (
-    <View style={styles.componentContainer}>
+    <View
+      style={[styles.componentContainer, { flexDirection: selectDirection }]}
+    >
       {options.map(item => (
         <View key={item.key} style={styles.buttonContainer}>
           <TouchableOpacity style={styles.circle} disabled={!!item.disabled}>
