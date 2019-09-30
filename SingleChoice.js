@@ -34,12 +34,16 @@ const styles = StyleSheet.create({
 });
 
 const SingleChoice = props => {
-  const { options } = props;
+  const { options, defaultValue, keyName } = props;
   return (
     <View style={styles.componentContainer}>
       {options.map(item => (
         <View key={item.key} style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.circle}></TouchableOpacity>
+          <TouchableOpacity style={styles.circle} disabled={!!item.disabled}>
+            {defaultValue[keyName] === item.key && (
+              <View style={styles.checkedCircle} />
+            )}
+          </TouchableOpacity>
           <Text style={styles.optionColor}>{item.text}</Text>
         </View>
       ))}
