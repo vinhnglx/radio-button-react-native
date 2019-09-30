@@ -20,5 +20,5 @@
   "homepage": "https://github.com/ide/react-native-button",
   "peerDependencies": {
     "react-native": "*"
-  },
+  }
 }
