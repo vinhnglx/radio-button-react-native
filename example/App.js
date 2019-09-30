@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import SingleChoice from 'react-native-single-choice';
 
@@ -15,6 +15,7 @@ const App = () => {
     {
       key: 'faceId',
       text: 'Enable Face ID',
+      disabled: true,
     },
     {
       key: 'pin',
@@ -26,11 +27,17 @@ const App = () => {
     },
   ];
 
+  const [securityMethod, setSecurityMethod] = useState({method: 'pin'});
+
   console.log(securityMethodOptions);
 
   return (
     <View style={{flex: 1, marginTop: 20}}>
-      <SingleChoice options={securityMethodOptions} />
+      <SingleChoice
+        options={securityMethodOptions}
+        defaultValue={securityMethod}
+        keyName="method"
+      />
     </View>
   );
 };
