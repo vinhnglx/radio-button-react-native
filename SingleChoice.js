@@ -33,14 +33,28 @@ const styles = StyleSheet.create({
 });
 
 const SingleChoice = props => {
-  const { options, defaultValue, keyName, selectDirection } = props;
+  const {
+    options,
+    defaultValue,
+    keyName,
+    selectDirection,
+    setValueFunc
+  } = props;
   return (
     <View
       style={[styles.componentContainer, { flexDirection: selectDirection }]}
     >
       {options.map(item => (
         <View key={item.key} style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.circle} disabled={!!item.disabled}>
+          <TouchableOpacity
+            style={styles.circle}
+            onPress={() => {
+              setValueFunc({
+                [keyName]: item.key
+              });
+            }}
+            disabled={!!item.disabled}
+          >
             {defaultValue[keyName] === item.key && (
               <View style={styles.checkedCircle} />
             )}
