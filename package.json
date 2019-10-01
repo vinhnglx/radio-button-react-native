@@ -1,6 +1,6 @@
 {
   "name": "react-native-single-choice",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Radio button component for react-native",
   "main": "SingleChoice.js",
   "repository": "https://github.com/vinhnglx/radio-button-react-native",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/vinhnglx/radio-button-react-native/issues"
   },
-  "homepage": "https://github.com/ide/react-native-button",
+  "homepage": "https://github.com/vinhnglx/radio-button-react-native",
   "peerDependencies": {
     "react-native": "*"
   }

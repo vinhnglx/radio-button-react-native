@@ -69,6 +69,10 @@ const App = () => {
 export default App;
 ```
 
+## Demo
+
+![Demo](./images/App.png)
+
 ## Props
 
 - `options`: list options. It's an array of objects. Set disabled to be true if you want disable that option.
