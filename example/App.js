@@ -41,8 +41,6 @@ const App = () => {
   const [securityMethod, setSecurityMethod] = useState({method: 'pin'});
   const [role, setRole] = useState({role: 'actor'});
 
-  console.log(securityMethodOptions);
-
   return (
     <View style={{flex: 1, marginTop: 40, marginLeft: 20}}>
       <Text>React Native Single Choice</Text>
