@@ -38,15 +38,17 @@ const SingleChoice = props => {
     defaultValue,
     keyName,
     selectDirection,
-    setValueFunc
+    setValueFunc,
+    testID
   } = props;
   return (
     <View
-      style={[styles.componentContainer, { flexDirection: selectDirection }]}
+      testID={testID} style={[styles.componentContainer, { flexDirection: selectDirection }]}
     >
       {options.map(item => (
         <View key={item.key} style={styles.buttonContainer}>
           <TouchableOpacity
+            testID={testID ? `${testID}-${item.key}` : null}
             style={styles.circle}
             onPress={() => {
               setValueFunc({
